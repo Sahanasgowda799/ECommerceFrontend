@@ -5,16 +5,11 @@ interface TextComponentOneProps {
   additionalClassName?: string;
 }
 
-const TextComponentOne = forwardRef<HTMLHeadingElement, TextComponentOneProps>(
-  ({ text, additionalClassName = "" }, ref) => {
-    return (
-      <h2
-        ref={ref}
-        className={additionalClassName}>
-        {text}
-      </h2>
-    );
-  }
-);
+const TextComponentOne = ({
+  text,
+  additionalClassName = "",
+}: TextComponentOneProps) => {
+  return <div className={`text-xl ${additionalClassName}`}>{text}</div>;
+};
 
 export default TextComponentOne;
