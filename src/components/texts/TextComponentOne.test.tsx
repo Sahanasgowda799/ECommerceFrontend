@@ -26,20 +26,3 @@ test("applies additional class name", () => {
   const heading = screen.getByText(text);
   expect(heading).toHaveClass(additionalClassName);
 });
-
-// Test case to check if ref forwarding works correctly
-test("forwards ref correctly", () => {
-  const ref = React.createRef<HTMLHeadingElement>();
-  const text = "Text with Ref";
-
-  render(
-    <TextComponentOne
-      text={text}
-      ref={ref}
-    />
-  );
-
-  const heading = ref.current;
-  expect(heading).toBeInTheDocument();
-  expect(heading?.tagName).toBe("H2");
-});

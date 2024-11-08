@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import TextComponentOne from "./components/texts/TextComponentOne.tsx";
+import SignUp from "./pages/SignUp.tsx";
 
 function App() {
   return (
     <div className="App">
-      <TextComponentOne text="Create Account" />
+      <SignUp />
     </div>
   );
 }
